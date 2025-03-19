@@ -4,6 +4,7 @@ src/
 *.ts
 *.tsx
 .vscode/
+.DS_Store
 .npmignore
 .git/
 .gitignore

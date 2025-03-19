@@ -3,6 +3,7 @@ yarn.lock
 dist/
 *.d.ts.map
 .vscode/
+.DS_Store
 .npmignore
 .git/
 .gitignore
