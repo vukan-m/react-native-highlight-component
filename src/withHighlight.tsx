@@ -22,7 +22,7 @@ const withHighlight = (highlightProps: WithHighlightProps) => {
     showDelay,
     showNextAfterComplete,
   } = highlightProps;
-  return props => {
+  return (props: any) => {
     const { showHighlight } = useHighlight();
     const aRef = useAnimatedRef<View>();
     const isScrolling = useRef(false);

@@ -2,7 +2,6 @@ import React from "react";
 import { Text, View } from "react-native";
 import Animated, {
   measure,
-  runOnJS,
   runOnUI,
   useAnimatedRef,
   useAnimatedStyle,
@@ -41,7 +40,7 @@ const HighlightOverlay = () => {
     hideHighlight(highlightedComponent.showNextAfterComplete ?? !isCompleted);
   };
 
-  const handleOverlayPress = (e) => {
+  const handleOverlayPress = (e: any) => {
     const { pageX, pageY } = e.nativeEvent;
     const componentMinX = x;
     const componentMaxX = x + width;

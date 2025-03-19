@@ -4,7 +4,7 @@ import { applyDefaultsToSettings } from "./utils";
 
 export const HighlightStorage = new MMKV();
 export const HighlightStorageMMKVKeys = {
-  highlightSettings: componentId => `highlight_settings_${componentId}`,
+  highlightSettings: (componentId: string) => `highlight_settings_${componentId}`,
 };
 
 export const getStorageSettings: (componentId: string) => HighlightComponentSettings = componentId => {

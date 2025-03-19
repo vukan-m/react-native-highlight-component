@@ -86,7 +86,7 @@ const getAdjustedPositions = (
 export const getHighlightId = () => {
   return highlightedComponentId;
 };
-export const HighlightProvider = ({ children }) => {
+export const HighlightProvider = ({ children }: {children: any}) => {
   const [highlightedComponent, setHighlightedComponent] = useState<HighlightedComponentStateType | null>(null);
 
   const privateShowHighlight = () => {

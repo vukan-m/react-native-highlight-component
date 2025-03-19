@@ -1,32 +1,18 @@
 {
-  "ts-node": {
-    // these options are overrides used only by ts-node
-    // same as our --compilerOptions flag and our TS_NODE_COMPILER_OPTIONS environment variable
-    "compilerOptions": {
-      "module": "commonjs"
-    }
-  },
   "compilerOptions": {
-    "allowJs": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "module": "CommonJS",
+    "target": "ESNext",
     "jsx": "react-native",
-    "lib": ["ESNext"],
-    "target": "esnext",
-    "noImplicitAny": false,
-    "removeComments": true,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "sourceMap": true,
-    "module": "esnext",
     "strict": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "isolatedModules": true,
-    "rootDir": "./",
-    "outDir": "./dist"
+    "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["node_modules", "**/lib/", "tsconfig.json"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

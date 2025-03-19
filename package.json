@@ -1,24 +1,16 @@
 {
-  "name": "@nature-digital/react-native-highlight",
+  "name": "react-native-highlight-component",
   "version": "1.0.0",
   "description": "Highlight React Native Components",
   "main": "src/index.tsx",
   "author": "Vukan Mirkovic <vukan.mirkovic@gmail.com> (https://github.com/vukan-m)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vukan-m/react-native-highlight/issues"
+    "url": "https://github.com/vukan-m/react-native-highlight-component/issues"
   },
-  "homepage": "https://github.com/vukan-m/react-native-highlight#readme",
+  "homepage": "https://github.com/vukan-m/react-native-highlight-component#readme",
   "files": [
-    "src",
-    "lib",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__"
-  ],
-  "eslintIgnore": [
-    "node_modules/",
-    "lib/"
+    "src"
   ],
   "dependencies": {
     "@react-navigation/native": "6.1.17",
@@ -30,5 +22,8 @@
     "react-native-svg": "15.8.0",
     "typescript": "^5.8.2"
   },
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@types/react": "18.3.18"
+  }
 }
