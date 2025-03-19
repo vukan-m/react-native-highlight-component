@@ -1,16 +1,5 @@
-import {
-  absolute,
-  absoluteZero,
-  borderRadiusHalf,
-  fullHeight,
-  fullWidth,
-  singlePadding,
-  smText,
-  spacing,
-  whiteBackground,
-} from "@nature-digital/styles";
 import React from "react";
-import { GestureResponderEvent, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import Animated, {
   measure,
   runOnJS,
@@ -24,6 +13,7 @@ import Svg, { Mask, Rect } from "react-native-svg";
 import { useHighlight } from "./HighlightProvider";
 import { setStorageSettings } from "./storage";
 import { HighlightComponentSettings } from "./types";
+import { absolute, absoluteZero, borderRadiusHalf, fullHeight, fullWidth, singlePadding, smText, whiteBackground } from "./styles";
 
 const HighlightOverlay = () => {
   const { highlightedComponent, hideHighlight } = useHighlight();
@@ -51,7 +41,7 @@ const HighlightOverlay = () => {
     hideHighlight(highlightedComponent.showNextAfterComplete ?? !isCompleted);
   };
 
-  const handleOverlayPress = (e: GestureResponderEvent) => {
+  const handleOverlayPress = (e) => {
     const { pageX, pageY } = e.nativeEvent;
     const componentMinX = x;
     const componentMaxX = x + width;
@@ -68,7 +58,7 @@ const HighlightOverlay = () => {
   const aStyle = useAnimatedStyle(() => {
     return { opacity: opacity.value, top: top.value, left: left.value };
   });
-  const log = (...args) => console.log(...args);
+
   const handleLayout = () => {
     const screenHeight = fullHeight();
     const screenWidth = fullWidth();
@@ -80,13 +70,12 @@ const HighlightOverlay = () => {
         if (measures === null) {
           return;
         }
-        runOnJS(log)(measures);
         const componentHighestY = y + height;
         const tooltipHightestX = x + measures.width;
         if (screenHeight - componentHighestY > measures.height) {
-          top.value = componentHighestY + spacing.singleAndAHalf;
+          top.value = componentHighestY + 12;
         } else if (screenHeight - componentHighestY < measures.height) {
-          top.value = y - spacing.singleAndAHalf - measures.height;
+          top.value = y - 12 - measures.height;
         }
         if (screenWidth > tooltipHightestX) {
           left.value = x;

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { fullHeight, fullWidth } from "@nature-digital/styles";
+import { fullHeight, fullWidth } from "./styles";
 import React, { createContext, createRef, useContext, useState } from "react";
 import { ScrollView } from "react-native-gesture-handler";
 import { getStorageSettings, setStorageSettings } from "./storage";

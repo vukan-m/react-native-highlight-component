@@ -21,12 +21,14 @@
     "lib/"
   ],
   "dependencies": {
+    "@react-navigation/native": "6.1.17",
     "react": "18.3.1",
     "react-native": "0.75.3",
-    "react-native-mmkv": "2.12.2",
-    "react-native-svg": "15.8.0",
-    "react-native-reanimated": "3.16.1",
     "react-native-gesture-handler": "2.21.2",
-    "@react-navigation/native": "6.1.17"
-  }
+    "react-native-mmkv": "2.12.2",
+    "react-native-reanimated": "3.16.1",
+    "react-native-svg": "15.8.0",
+    "typescript": "^5.8.2"
+  },
+  "types": "dist/index.d.ts"
 }

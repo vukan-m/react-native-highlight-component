@@ -1,8 +1,8 @@
-import HighlightOverlay from "./HighlightOverlay";
-import { HighlightProvider, scrollRef } from "./HighlightProvider";
-import ScrollEmitter from "./ScrollEmitter";
-import ScrollWrapper from "./ScrollWrapper";
-import { resetHighlights } from "./utils";
-import withHighlight from "./withHighlight";
+export {default as HighlightOverlay} from "./HighlightOverlay";
+export { HighlightProvider, scrollRef } from "./HighlightProvider";
+export {default as ScrollEmitter} from "./ScrollEmitter";
+export {default as ScrollWrapper} from "./ScrollWrapper";
+export { resetHighlights } from "./utils";
+export {default as withHighlight} from "./withHighlight";
 
-export { HighlightOverlay, HighlightProvider, resetHighlights, ScrollEmitter, scrollRef, ScrollWrapper, withHighlight };
+export * from "./types";
