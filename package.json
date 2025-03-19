@@ -19,11 +19,12 @@
     "typescript": "^5.8.2"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types.d.ts",
   "files": [
     "dist/HighlightOverlay.**",
     "dist/HighlightProvider.**",
     "dist/index.**",
+    "dist/types.**",
     "dist/ScrollEmitter.**",
     "dist/ScrollWrapper.**",
     "dist/utils.**",
