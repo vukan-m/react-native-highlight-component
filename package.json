@@ -1,6 +1,6 @@
 {
   "name": "react-native-highlight-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Highlight React Native Components",
   "author": "Vukan Mirkovic <vukan.mirkovic@gmail.com> (https://github.com/vukan-m)",
   "license": "MIT",
@@ -20,16 +20,7 @@
   },
   "main": "dist/index.js",
   "types": "dist/types.d.ts",
-  "files": [
-    "dist/HighlightOverlay.**",
-    "dist/HighlightProvider.**",
-    "dist/index.**",
-    "dist/types.**",
-    "dist/ScrollEmitter.**",
-    "dist/ScrollWrapper.**",
-    "dist/utils.**",
-    "dist/withHighlight.**"
-  ],
+  "files": ["dist/"],
   "devDependencies": {
     "@types/react": "18.3.18"
   }
