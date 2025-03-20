@@ -173,6 +173,47 @@ public class MyApplication extends Application {
 }
 ```
 
+### Working with refs
+If you have component wrapper in `forwardRef` do not assign ref to the highlighted component itself but instead pass the ref as `componentRef` prop to `withHighlight` HoC.
+```jsx
+import React, { forwardRef } from 'react';
+import { View, Text } from 'react-native';
+
+const ComponentWithRef = forwardRef((props, ref) => {
+  return (
+    <View ref={ref}>
+      <Text>Example</Text>
+    </View>
+  );
+});
+
+export default ComponentWithRef;
+
+
+import React, { useRef } from 'react';
+import { View } from 'react-native';
+import { withHighlight } from 'react-native-highlight-component';
+import ComponentWithRef from './ComponentWithRef';
+
+const App = () => {
+  const ref = useRef(null);
+  const HighlightedComponent = withHighlight({
+    Component: ComponentWithRef,
+    componentRef: ref,
+    id: "component_with_ref",
+    Tooltip: "This is a forwardRef component."
+  });
+
+  return (
+    <View>
+      <HighlightedComponent />
+    </View>
+  );
+};
+
+export default App;
+```
+
 ## Contributing
 
 See the [contributing guide](https://chatgpt.com/c/CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
